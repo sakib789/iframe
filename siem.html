@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIEM Dashboard</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #2f2f45;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #cfcfea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #4ad991;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sidebar {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .main {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+      background-color: #f8f9fb;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #1e1e2f;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .status div {
+      text-align: center;
+      flex: 1;
+    }
+
+    .status h2 {
+      color: #4ad991;
+      margin-bottom: 5px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 10px;
+      margin-top: 10px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🛡️ SIEM Dashboard
+  </header>
+
+  <nav>
+    <a href="#">Dashboard</a>
+    <a href="#">Alerts</a>
+    <a href="#">Logs</a>
+    <a href="#">Analytics</a>
+    <a href="#">Settings</a>
+  </nav>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Quick Filters</h3>
+      <ul>
+        <li>Critical Alerts</li>
+        <li>System Logs</li>
+        <li>User Activity</li>
+        <li>Network Traffic</li>
+        <li>Malware Detection</li>
+      </ul>
+    </aside>
+
+    <section class="main">
+      <h2>System Overview</h2>
+      <div class="status">
+        <div>
+          <h2>12</h2>
+          <p>Active Alerts</p>
+        </div>
+        <div>
+          <h2>3</h2>
+          <p>Critical Issues</p>
+        </div>
+        <div>
+          <h2>87%</h2>
+          <p>System Health</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Recent Alerts</h3>
+        <ul>
+          <li>[High] Unauthorized login attempt detected from 192.168.1.45</li>
+          <li>[Medium] Suspicious process execution: powershell.exe</li>
+          <li>[Low] New admin user created by HR system</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Log Summary</h3>
+        <p>Last updated: 2025-10-29 10:00:00</p>
+        <p>Processed 2,340 logs in the past hour.</p>
+      </div>
+
+      <div class="card">
+        <h3>Analytics</h3>
+        <p>Top 3 Sources:</p>
+        <ol>
+          <li>Firewall - 45%</li>
+          <li>Endpoint - 35%</li>
+          <li>Server Logs - 20%</li>
+        </ol>
+        
+        <!-- YouTube video iframe -->
+<iframe 
+  src="https://player.vimeo.com/video/76979871"
+  width="640"
+  height="360"
+  frameborder="0"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+<iframe src="https://192.168.161.128/app/dashboards#/view/5990509f-4243-40e7-bca2-00a6381ccfe0?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-24h,to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:wazuh-security-events-v1.0,viewMode:view)" height="600" width="800"></iframe>
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 SIEM System | Secure. Monitor. Protect.
+  </footer>
+
+</body>
+</html>
